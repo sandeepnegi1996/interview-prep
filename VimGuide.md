@@ -22,4 +22,12 @@
 
 #### Command mode editing
 	* "x" is used to ** delete ** something and "u" to ** Undo **
+	* "dw" to delete a word
+	* "w" to move word by word "2w" this is travel by two words
+	* "dd" to delete a line
+	* "p" put command to paste the deleteed lins use "p" put command
+
+#### Part1 Vim Distro Tube done
+
+
 
