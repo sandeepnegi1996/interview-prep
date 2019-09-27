@@ -21,5 +21,5 @@
 	* 0 to start of the line
 
 #### Command mode editing
-	* "x" is used to **delete** something and "u" to **Undo**
+	* "x" is used to ** delete ** something and "u" to ** Undo **
 
