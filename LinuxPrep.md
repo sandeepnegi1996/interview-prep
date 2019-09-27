@@ -31,4 +31,21 @@
 	 whole link.
 
 ### Q.7) **What does Ctrl+alt+del does in linux ?**
-	* restrat without asking
+	* restart without asking
+
+### Q.8) How chmod works ?
+	*  chmod [reference][operator][mode] file... 
+	* refernce: is user,group,other and notaion  u,g,o
+	* operator: +,-,=  //this will add,remove then the mode
+	* mode: r,w,x 
+	* chmod u=rwx filename.txt
+
+### Q.9)  What is the pwd command?
+	* it will print the current working directory
+
+### Q.10) What is Daemon ?
+	* it is a process that will run in banground and wait for the request. After the service request is done it is then disconnected and
+	waits for further requests.
+	* example:- sshd is the daemon which listens for the ssh connection
+		    httpd which is listens for http connection
+
