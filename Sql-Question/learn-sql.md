@@ -18,7 +18,9 @@
 10. Differentiate between Delete and Trucate:
 	* Truncate removes all the rows from the table and this cannot be rollback
 	* whereas delete will delete particular rows,it will delete according to where clause and can be roll back
-11.
+
+
+11. Joins
 
 
 
