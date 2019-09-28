@@ -3,6 +3,7 @@
 
 # Interview Questions:-
 
+
 ### Q.1) What is LILO ?
 	* boot-loader for linux it is used to load linux into main-memory
 
@@ -48,4 +49,27 @@
 	waits for further requests.
 	* example:- sshd is the daemon which listens for the ssh connection
 		    httpd which is listens for http connection
+
+### Q.11) How to search using grep ?
+	* below instead of filename we can also put folder name
+	* grep "searchString" fileName
+	* grp -i "searchString" filename   //this will ignore the case 
+	* grep -r "searchSomeText" filename  //this will search the file all the subDirectories
+	* grep -c "linux" filename.txt
+
+### Q.12) How Pipes works:-
+	* pipes takes the output from one file to input of the next comma	nd.
+	* Ex: ls -l | more
+	* we can add as many commands we want to add
+	* cat linuxPrep.md | head -7 | tail -10
+		* above command will print from line 7 to 10 
+	
+
+
+
+
+
+
+
+
 
