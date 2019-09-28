@@ -51,3 +51,73 @@
 
 
 
+
+* -------------------------------------------------------------------------------
+	# SQL Queries
+	1.  Write An SQL Query To Fetch Unique Values Of DEPARTMENT From Worker Table.
+		
+	* select distinct DEPARTMENT from Worker
+
+	2. Write a SQL query to fetch the first three characters of FIRST_NAME from Worker Table ?
+
+	* select substring(FIRST_NAME,1,3) from Worker
+
+	3. Write a SQL query to print FIRST_NAME from Worker table after removing the white spaces from right.
+
+	* select RTRIM(FIRST_NAME) from Worker
+
+	4. write a sql query to print the department name from Worker table after removing space from left ?
+	
+	* select LTRIM(DEPARTMENT) from Worker
+
+	5. Sql query to print the unique values of Department from worker table and its length ?
+
+	* select distinct length(DEPARTMENT) form Worker
+
+	6. Write An SQL Query To Print The FIRST_NAME And LAST_NAME From Worker Table Into A Single Column
+	COMPLETE_NAME. A Space Char Should Separate Them.
+
+	* select concat(FIRST_NAME,' ',LAST_NAME) from Worker
+
+	7. Write An SQL Query To Print All Worker Details From The Worker Table Order By FIRST_NAME Ascending.
+
+	* select * from Worker order by FIRST_NAME asc.
+
+	8. Write An SQL Query To Print All Worker Details From The Worker Table Order By FIRST_NAME Ascending And DEPARTMENT Descending.
+	
+	* select * from Worker order by FIRST_NAME asc,DEPARTMENT desc.
+
+	9. Write An SQL Query To Print Details For Workers With The First Name As “Vipul” And “Satish” From Worker Table.
+
+	* select * from Worker where FIRST_NAME in ('Vipul','Satish')
+
+	10. Write An SQL Query To Print Details Of Workers Excluding First Names, “Vipul” And “Satish” From Worker Table.
+
+	* select * from Worker FIRST_NAME not in ('Vipul','Satish')
+
+	11. Write An SQL Query To Print Details Of Workers With DEPARTMENT Name As “Admin”.
+	
+	* selet * from Worker where DEPARTMENT like 'Admin%'
+
+	12. Write An SQL Query To Print Details Of The Workers Whose FIRST_NAME Contains ‘a’.
+
+	* select * from Worker where FIRST_NAME like '%a%' .
+
+	13. Write An SQL Query To Print Details Of The Workers Whose FIRST_NAME Ends With ‘A’.
+	
+	* select * from Worker where FIRST_NAME like '%a' .
+
+	14. The Count Of Employees Working In The Department ‘Admin’. 
+	
+	* select count(*) from Worker where DEPARTMENT="admin"
+
+	15. Write An SQL Query To Fetch Worker Names With Salaries >= 50000 And <= 100000.
+
+	* select FIRST_NAME from Worker where Salaries BETWEEN 50000 AND 10000.
+
+	16. 
+
+
+
+
+
