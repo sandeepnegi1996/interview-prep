@@ -16,9 +16,23 @@
 	 | RollNo | Name | Branch | HOD | Dep_PhoneNo |
 	 |--------|------|--------|-----|-------------|
 	 | 1      | Akon | CSE	  | Mr.X| 5667        |
-	 | 2	  | Bkon | CSE    | Mr.Y| 5667	      |
+	 | 2	  | Bkon | CSE    | Mr.X| 5667	      |
+	 | 3	  | Ckon | CSE	  | Mr.X| 5667	      |
+
+
+
+	* Inseriton :  so what is insertion anamoly aassume we want to enter the 100 students info
+	  for that all the details of the branch,HOD,Dep_phoneNo will be added again and that will increase the size of the database
+	  this is the insertion anamoly
+
+	* Deletion :  Assume we want to delete all the students details in that case all the branch details will also be removed 
+			this is the deletion anamoly.
+        * Updation : Assume we are updating the records and we have updated the HOD name since new HOD is alloted to CS department
+		     than all the rows needs to be updated and if any row is not updated it will lead to updation anamoly.
 	
-	
+	* ------------------------------------------------------------------
+	* To overcome this we will divide the table into 2 table one is for the roll number other is for the branch table which will help to 
+	 remove this anamoly.
 
 5. View
 6. what is index.
