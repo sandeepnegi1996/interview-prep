@@ -20,7 +20,7 @@
 	* whereas delete will delete particular rows,it will delete according to where clause and can be roll back
 
 
-11. Joins
+
 
 
 
