@@ -258,4 +258,63 @@ public static String stringReverseRecursively(String s){
         System.out.println(min1 +" "+min2);
     }
     ```
-#### Q #13) Factorial
+#### Q #13) Binary Search Implementaion
+
+	* Iterative Solution:- create a function pass the array and the element you wwant to find,
+	  the array should be sorted. so first we will compare our element `X` which we want to find to the mid of array
+	  then if it is the mid element we will return if its not mid either the `X` will be bigger or smaller than the mid
+	  if bigger then mid then make the `start=mid+1` if `X` is smaller make the `end=mid-1`.
+
+	 
+	 ```java
+	
+	public static int binarySearch(int arr[],int x){
+		
+		int l=0;
+		int r=arr.length;
+		int mid=0;
+		while(l<=r){
+			mid=l+(r-l)/2;
+
+			if(arr[mid]==x)
+				return mid;
+
+			else if(x>arr[mid])
+				l=mid+1;
+
+			else
+				r=mid-1;
+
+		}
+
+		return -1;
+	}
+
+	 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
