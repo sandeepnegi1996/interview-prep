@@ -294,8 +294,62 @@ public static String stringReverseRecursively(String s){
 
 
 
+#### Q14.) Reverse Each word in a string ?
+	* Reversing each word is god damm simple just push each aplhabet in the stack until a space come and then
+	  pop them out as soon as space will come,
+
+	* so what is happening basically you are putting each word in a stack and popping as space come 
+	 since stack pops from reverse it will reverse each word
+
+	* first try this approach with the single word then do this with complete line
 
 
+	```java
+	
+
+
+
+{
+	
+
+	public static void reverseWord(String str){
+
+		Stack<Character> mystack=new Stack<Character>();
+		
+		char arr[]=str.toCharArray();
+
+		for(int i=0;i<arr.length;i++){
+			
+			//if the charAt(i) is not a space then push 
+			//if it is space start popping out of the stack
+			// so what will happen
+			// we will push each word in the stack and pop the word as space occur 
+
+
+			if(arr[i]==' '){
+				while(!mystack.empty())
+
+					System.out.print(mystack.pop());
+
+			System.out.print(" ");
+			}
+
+			else
+				mystack.push(arr[i]);
+
+		}
+
+		while(!mystack.empty())
+			System.out.print(mystack.pop());
+
+
+		
+	}
+
+
+	
+
+	```
 
 
 
