@@ -351,10 +351,31 @@ public static String stringReverseRecursively(String s){
 
 	```
 
+## Pattern:-
+
+```
+*
+* *
+* * *
+* * * *
+* * * * *
+
+```
+
+1. Solution for the above pattern
+ 
 
 
 
+```
+	* * * * *
+	* * * *
+	* * *
+	* *
+	*
 
+```
+2. 
 
 
 

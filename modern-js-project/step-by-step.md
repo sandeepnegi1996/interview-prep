@@ -3,6 +3,48 @@
 # Objective:
 ## we will create npm package for the spinners using React
 
+## I will try to take only those steps from the projects that I need
+
+
+## Most Important things in Modern-Project
+
+1.Version Control 
+2.Automated CI/CD
+3.Code quality
+4.Tooling
+5.Module support
+6.Documented API
+7.Demos
+
+
+### Automated CI/CD
+**BUILD PROCESS**
+
+## Stages
+	1. install :- install the dependencies , npm ci
+	2. lint    :- linter and formatter. eslint and prettier
+	3. test    :- jest and codecoverage=coveralls
+	4. build   :- remove unnessary parts.
+			* transpile- bebl/typescript
+			* pre-process:- sass/less/terser
+			* uglify:- uglify.js
+			* bundle,compress
+
+	5. push    :- release:- github/bitbucket and publish:- npm/other registry
+	6. deploy  :- host:- heroku/github-pages
+
+
+### General Overview:-
+
+1. creating an npm package or library that can be used with react
+2. Travis CI is used for build pipeline so any time we make a commit 
+   it will build and test the project // this is important
+
+
+
+
+
+
 ### Steps:
 
 	* Step 1:-Create a github repo
