@@ -35,3 +35,7 @@
 9. find file with file name but ignore the cases ?
 	* find . -iname index.html
 	* -i means ignore the cases
+
+10. find the directry with name?
+	* find / -type d -name Folder-name
+
