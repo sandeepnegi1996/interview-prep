@@ -72,3 +72,133 @@ Since there is no index called as 6 this will throw an exception called as Index
 						  int a=Integer.parseInt(s);
 
 Since we are trying to store string in an integer this will throw number format exception.
+
+
+
+
+
+
+Example with code:
+
+1. Arithmetic Exception
+
+```java
+public class Main
+{
+	public static void main(String[] args) {
+		
+		
+		try{
+		    int a = 50/0;
+		}
+		catch(ArithmeticException e){
+		    System.out.println(e);
+		    
+		}
+		finally{
+		    System.out.println("this will always run");
+		}
+		
+	}
+}
+
+```
+```java
+java.lang.ArithmeticException: / by zero                                                                                                                                                      
+this will always run   
+```
+
+
+2. IndexOutOfBoundException
+
+```java
+public class Main
+{
+	public static void main(String[] args) {
+		
+		int a[]=new int[5];
+		try{
+		    a[5]=0;
+		}
+		catch(IndexOutOfBoundsException e){
+		    System.out.println(e);
+		    
+		}
+		finally{
+		    System.out.println("this will always run");
+		}
+		
+	}
+}
+```
+
+```java
+output
+java.lang.ArrayIndexOutOfBoundsException: 5                                                                                                                                                 
+this will always run 
+
+```
+
+
+3. NullPointerException
+
+```java
+public class Main
+{
+	public static void main(String[] args) {
+		
+		String s=null;
+		try{
+		   int l=s.length();
+		}
+		catch(NullPointerException e){
+		    System.out.println(e);
+		    
+		}
+		finally{
+		    System.out.println("this will always run");
+		}
+		
+	}
+}
+```
+
+
+```java
+output
+this will always run                                                                                                                                                                        
+Exception in thread "main" java.lang.NullPointerException                                                                                                                                   
+        at Main.main(Main.java:15)  
+```
+
+4. NumberFormatException
+
+```java
+public class Main
+{
+	public static void main(String[] args) {
+		
+		String s="abc";
+		try{
+		   int l=Integer.parseInt(s);
+		}
+		catch(NumberFormatException e){
+		    System.out.println(e);
+		    
+		}
+		finally{
+		    System.out.println("this will always run");
+		}
+		
+	}
+}
+
+```
+
+```java
+java.lang.NumberFormatException: For input string: "abc"                                                                                                                                    
+this will always run 
+
+
+```
+
