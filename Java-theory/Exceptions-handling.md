@@ -43,6 +43,32 @@ Under throwable we have Exception and Error:
 		  cannot be used alone without try block.
 
 3. finally: it will run whether exception occur or not.
-			It must be followed by try/
-			
+			It must be followed by try/ or catch 
 
+4. throw: This keyword is basically used to throw an exception.
+
+5 throws: this keyword is used to declare an exception.
+		 It doesn't throw an exception
+		 used with method signature
+		 Basically it species there may occur an exception in the method
+
+
+
+## Common Scenarios of Java Excepitons
+
+1. Arithmetic Exception: Ex int a = 50/0  
+						 Dividing the number by zero will throws Arithmetic Exception
+
+2. Null Pointer Exceptio: Ex. String s=null;
+								int l=s.length();
+
+							Giving a string a null value and then doing some operations on top of it will throw null Pointer Exception
+3. IndexOutOfBound: int a[]=new int[5];
+					a[6]=0;
+
+					Since there is no index called as 6 this will throw an exception called as IndexOutOfBound Exception
+4. NumberFormatException: Sting s = "abc"
+						  int a=Integer.parseInt(s);
+
+						  Since we are trying to store string in an integer this will throw number format exception.
+			
