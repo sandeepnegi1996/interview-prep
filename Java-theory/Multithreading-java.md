@@ -88,3 +88,128 @@ public class Main
 }
 
 ```
+
+
+
+### Thread Scheduler in java
+
+1. Thread Scheduler is a part of JVM but the algorithm which is used to schedule the thread will depend on the OS.
+2. There can be multiple thread in a process.
+3. Thread scheduler can use either preemptive or time slicing algorithm.
+4. At a time only single thread can be run so thats why we need the thread scheduler to go to the other thread.
+
+
+
+### Thread Sleep Method
+
+1. Sleep method of thread class is used to stop the execution of the thread for some time
+2. Thread.sleep()
+3. in the below example I have created two threads and as soon as sleep method is called in one thread
+thread scheduler chooose the second thread to be running.
+
+
+```java
+class mysleepthread extends Thread{
+    public void run(){
+        
+        for (int i=0;i<5 ;i++ ){
+            
+            try {
+                //Thread.sleep(500);
+            } catch(Exception e) {
+                System.out.println(e);
+            }
+            
+            System.out.println(i);
+        } 
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		mysleepthread t1=new mysleepthread();
+		mysleepthread t2=new mysleepthread();
+		t1.start();
+		t2.start();
+		
+	}
+}
+```
+
+
+### Can we start a thread twice
+
+1. yes we can start the thread twice but in that case the first time the thread will run but for the next time it will throw an exception.
+
+```java
+public class TestThreadTwice1 extends Thread{  
+ public void run(){  
+   System.out.println("running...");  
+ }  
+ public static void main(String args[]){  
+  TestThreadTwice1 t1=new TestThreadTwice1();  
+  t1.start();  
+  t1.start();  
+ }  
+} 
+
+```
+
+```java
+
+output: running
+		Exception
+```
+
+
+### What will happen if we call the run directly
+
+1. it wont generate the different call stack it will go to the same call stack
+
+```java
+
+class myThread extends Thread{
+    public void run(){
+        System.out.println("running");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		myThread t1=new myThread();
+		t1.run();
+		
+	}
+}
+
+```	
+2. 	In this case it will run properly but the run function will act as a normal funtion and will pushed in the same call stack
+
+3. we call the run method of two threads than in that case it will run as a normal function.
+	like in below case it will print 0-4 and then again print 0-4
+
+```java
+class myThread extends Thread{
+    public void run(){
+        for (int i=0;i<5;i++ ){
+            System.out.println(i);
+        } 
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		myThread t1=new myThread();
+		myThread t2=new myThread();
+		t1.run();
+		t2.run();
+		
+	}
+}
+```
