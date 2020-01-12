@@ -91,8 +91,11 @@ public class Main
 
 
 
-### Thread Scheduler in java
+### Thread Scheduler in java 
 
+1. **No term as  JVM thread Scheduler** Scheduling is done by OS and consider the JVM Thread Scheduler as 
+a logical enity
+2. JVM will create a thread for the OS and OS does the scheduling
 1. Thread Scheduler is a part of JVM but the algorithm which is used to schedule the thread will depend on the OS.
 2. There can be multiple thread in a process.
 3. Thread scheduler can use either preemptive or time slicing algorithm.
@@ -209,6 +212,51 @@ public class Main
 		myThread t2=new myThread();
 		t1.run();
 		t2.run();
+		
+	}
+}
+```
+
+### How Join Method works ?
+
+1. join will wait for the thread to be completed and then only other thread will work
+2. Even when Thread.sleep() is called the execution will not go to the other thread it will wait for the 
+   for the execution.
+
+```java
+class myThread extends Thread{
+    public void run(){
+        for (int i=0;i<5;i++ ){
+            try{
+                Thread.sleep(500);
+            }
+            catch(Exception e)
+            {
+                System.out.println(e);
+            }
+            System.out.println(i);
+        } 
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		myThread t1=new myThread();
+		myThread t2=new myThread();
+		myThread t3=new myThread();
+		t1.start();
+		
+		try{
+		    t1.join();
+		}
+		catch(Exception e){
+		    System.out.println(e);
+		    
+		}
+		t2.start();
+		t3.start();
 		
 	}
 }
