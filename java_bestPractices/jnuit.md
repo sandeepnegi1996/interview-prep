@@ -45,4 +45,9 @@ and if we want to remove or deallocate something we will do that in the @After T
 
 ### JUnit Assert Class
 
-1. **assertEquals("string1","string2")**   when both actual and get value is same the testcase will pass :relaxed:
+1. **assertEquals("string1","string2")**   
+   means when inside is the true then test case is passes
+2. assertFalse(boolean condition)  * when the boolean condition is false then test case is passed
+3. assertNotNull(Object obj)       * When the obj is not null test case will be passed
+4. assertTrue(condition)
+5. assertFalse(condition)
