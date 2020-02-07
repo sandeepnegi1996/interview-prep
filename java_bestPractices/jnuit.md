@@ -45,4 +45,4 @@ and if we want to remove or deallocate something we will do that in the @After T
 
 ### JUnit Assert Class
 
-1. **assertEquals("string1","string2")** 
+1. **assertEquals("string1","string2")**   when both actual and get value is same the testcase will pass :relaxed:
